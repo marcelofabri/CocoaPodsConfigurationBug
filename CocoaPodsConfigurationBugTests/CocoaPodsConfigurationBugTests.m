@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <OHHTTPStubs/OHHTTPStubs.h>
+#import <Expecta/Expecta.h>
 
 @interface CocoaPodsConfigurationBugTests : XCTestCase
 
@@ -17,6 +19,14 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+
+
+    [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest * _Nonnull request) {
+        return YES;
+    } withStubResponse:^OHHTTPStubsResponse * _Nonnull(NSURLRequest * _Nonnull request) {
+        NSError* notConnectedError = [NSError errorWithDomain:NSURLErrorDomain code:kCFURLErrorNotConnectedToInternet userInfo:nil];
+        return [OHHTTPStubsResponse responseWithError:notConnectedError];
+    }];
 }
 
 - (void)tearDown {
@@ -25,8 +35,7 @@
 }
 
 - (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    expect(1).to.equal(1);
 }
 
 - (void)testPerformanceExample {
