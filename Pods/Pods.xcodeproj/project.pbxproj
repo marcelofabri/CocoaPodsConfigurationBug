@@ -1049,22 +1049,84 @@
 			};
 			name = Release;
 		};
-		17BAF1BDADF33C01C3CB1FF958436276 /* BuggyConfiguration */ = {
+		0FD061FBF12B957A734F19581FA4DAD4 /* BuggyConfiguration */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_BUGGY_CONFIGURATION=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = BuggyConfiguration;
+		};
+		208C7CDCF8B3801AE131B1073CF5FF63 /* BuggyConfiguration */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1630066540F15E94CD2BF1FEA7FFAD28 /* Specta.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Specta/Specta-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = BuggyConfiguration;
+		};
+		240DD7ADF94219B791EDF508805300C5 /* BuggyConfiguration */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9B5A26259A89F392871D29974B14F23 /* Pods-CocoaPodsConfigurationBugTests.buggyconfiguration.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -1091,17 +1153,17 @@
 			};
 			name = Debug;
 		};
-		323144F50F912FF296A6362761F4A73A /* BuggyConfiguration */ = {
+		39D1BC57BD9452D26B5992523CDA8C99 /* BuggyConfiguration */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BE98FA2F050156413478601E314C4DC /* Expecta.xcconfig */;
+			baseConfigurationReference = 4EF4C82989B5CF5678A9E2FCFF66B06B /* OHHTTPStubs.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Expecta/Expecta-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/OHHTTPStubs/OHHTTPStubs-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1132,6 +1194,27 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
+		};
+		505AE29C3C69063244016E4A0ACDEE6A /* BuggyConfiguration */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BE98FA2F050156413478601E314C4DC /* Expecta.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Expecta/Expecta-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = BuggyConfiguration;
 		};
 		5376CAB94CC9915BFD4889B5BC4E3267 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1175,43 +1258,22 @@
 			};
 			name = Debug;
 		};
-		723F8B480F4A5361B5E187A29E477F57 /* BuggyConfiguration */ = {
+		8679FFFEAD02917745AD74F8C3010607 /* BuggyConfiguration */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9B5A26259A89F392871D29974B14F23 /* Pods-CocoaPodsConfigurationBugTests.buggyconfiguration.xcconfig */;
+			baseConfigurationReference = 1001BBB612C52DE7F652CADBDD3D2678 /* Pods-CocoaPodsConfigurationBug.buggyconfiguration.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = BuggyConfiguration;
-		};
-		7AF80FFDC059A7332A80443B66541B46 /* BuggyConfiguration */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EF4C82989B5CF5678A9E2FCFF66B06B /* OHHTTPStubs.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/OHHTTPStubs/OHHTTPStubs-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -1258,27 +1320,6 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
-		};
-		A8EC14F5D088E9C43AC1A2C07ADCC1D3 /* BuggyConfiguration */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1001BBB612C52DE7F652CADBDD3D2678 /* Pods-CocoaPodsConfigurationBug.buggyconfiguration.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = BuggyConfiguration;
 		};
 		AD8B4D87ED015578B4884684AC2F040B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1339,43 +1380,6 @@
 			};
 			name = Release;
 		};
-		D496B21C4A0C07E3CF22D500828A5D99 /* BuggyConfiguration */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_BUGGY_CONFIGURATION=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = BuggyConfiguration;
-		};
 		F77ECA7F3F42B3C0889125F949635743 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E2D5FD9084B74B62094FDB8BF5C6196D /* Pods-CocoaPodsConfigurationBug.release.xcconfig */;
@@ -1403,7 +1407,7 @@
 		0393467E3BF3698DA727A5E0DF3FC3E8 /* Build configuration list for PBXNativeTarget "OHHTTPStubs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7AF80FFDC059A7332A80443B66541B46 /* BuggyConfiguration */,
+				39D1BC57BD9452D26B5992523CDA8C99 /* BuggyConfiguration */,
 				5376CAB94CC9915BFD4889B5BC4E3267 /* Debug */,
 				3F1C0AFBC15D79DEBA344732378C8113 /* Release */,
 			);
@@ -1413,7 +1417,7 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D496B21C4A0C07E3CF22D500828A5D99 /* BuggyConfiguration */,
+				0FD061FBF12B957A734F19581FA4DAD4 /* BuggyConfiguration */,
 				034014829C1E4434983CF3A690C12017 /* Debug */,
 				C7E474A03CAE21F1CB6046E7344C59BD /* Release */,
 			);
@@ -1423,7 +1427,7 @@
 		31B52C328948BA9BFFDC03D378B12E7D /* Build configuration list for PBXNativeTarget "Pods-CocoaPodsConfigurationBugTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				723F8B480F4A5361B5E187A29E477F57 /* BuggyConfiguration */,
+				240DD7ADF94219B791EDF508805300C5 /* BuggyConfiguration */,
 				5D79C4E874725E5B99B441DA5E846935 /* Debug */,
 				0D580226E42F2FCFEC332CAFE43BE403 /* Release */,
 			);
@@ -1433,7 +1437,7 @@
 		40677A441BB3025737AA0909795068BF /* Build configuration list for PBXNativeTarget "Expecta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				323144F50F912FF296A6362761F4A73A /* BuggyConfiguration */,
+				505AE29C3C69063244016E4A0ACDEE6A /* BuggyConfiguration */,
 				2425039512C1D24A0B695E4DECAA1B7F /* Debug */,
 				A6B6A1CCC68DAA376F60E15330DC11AD /* Release */,
 			);
@@ -1443,7 +1447,7 @@
 		B6DD9D939079D5DAC7B4F347D3470E1A /* Build configuration list for PBXNativeTarget "Pods-CocoaPodsConfigurationBug" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A8EC14F5D088E9C43AC1A2C07ADCC1D3 /* BuggyConfiguration */,
+				8679FFFEAD02917745AD74F8C3010607 /* BuggyConfiguration */,
 				AD8B4D87ED015578B4884684AC2F040B /* Debug */,
 				F77ECA7F3F42B3C0889125F949635743 /* Release */,
 			);
@@ -1453,7 +1457,7 @@
 		D33BAAC0B5A994D366CEE369D5B4DEE9 /* Build configuration list for PBXNativeTarget "Specta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				17BAF1BDADF33C01C3CB1FF958436276 /* BuggyConfiguration */,
+				208C7CDCF8B3801AE131B1073CF5FF63 /* BuggyConfiguration */,
 				9AE60F6E6B442697AF825DCD019156D7 /* Debug */,
 				0CF51735C90CD8A2ABF40566A46B4E4B /* Release */,
 			);
